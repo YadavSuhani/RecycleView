@@ -2,19 +2,27 @@
  <h2>
         Welcome to RecycleView!
     </h2>
-    <button>
+    <button @click="$router.push('check-object')">
         Recyclable?
     </button>
-    <button>
+    <button @click="$router.push('quiz-time')"> 
         Quiz Time!
     </button>
+    <div>
+      <router-view></router-view>
+    </div>
 </template>
 
-<script>
+<!-- <script>
+import { useRouter } from 'vue-router';
+
 export default {
   name: 'App',
+  setup() {
+    const router = useRouter()
+  },
 }
-</script>
+</script> -->
 
 <style>
 #app {
