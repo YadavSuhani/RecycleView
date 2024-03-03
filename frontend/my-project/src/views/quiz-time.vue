@@ -3,9 +3,3 @@
         hello
     </h2>
 </template>
-
-<script>
-export default{
-    name: 'quiz-time'
-}
-</script>

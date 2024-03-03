@@ -1,16 +1,12 @@
 <template>
- <h2>
-        Welcome to RecycleView!
-    </h2>
-    <button @click="$router.push('check-object')">
-        Recyclable?
-    </button>
-    <button @click="$router.push('quiz-time')"> 
-        Quiz Time!
-    </button>
-    <div>
-      <router-view></router-view>
-    </div>
+  <div id="nav">
+    <router-link class="link" to="/">home</router-link> |
+    <router-link class="link" to="/check-object">recyclable?</router-link> |
+    <router-link class="link" to="/quiz-time">quiz-time!</router-link> |
+  </div>
+  <div class="container">
+    <router-view></router-view>
+  </div>
 </template>
 
 <!-- <script>
@@ -25,6 +21,9 @@ export default {
 </script> -->
 
 <style>
+.link{
+  color: #009900;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
