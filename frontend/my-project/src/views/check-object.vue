@@ -26,8 +26,24 @@
         const file = event.target.files[0];
         if (file) {
           this.imageUrl = URL.createObjectURL(file);
+
+          let formData = new FormData();
+          formData.append('file', file)     //'image' is the key the server expects
+
+          fetch('http://1227.0.0.1:5000/upload', formData {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+          })
+          .then(response => response.json())
+          .then(data => {
+            console.log(data);
+          })
+          .catch(error => {
+            console.error('Error Uploading Image:', error);
+          });
         }
-      },
+      }, 
     },
   };
   </script>
